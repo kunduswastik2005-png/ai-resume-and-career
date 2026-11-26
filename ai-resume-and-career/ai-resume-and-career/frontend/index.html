@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GenTech-Z CareerPilot AI — Resume & Career Guidance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://unpkg.com/mammoth@1.8.0/mammoth.browser.min.js"></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">✦</span><span>GenTech-Z CareerPilot<span class="brand-ai"> AI</span></span></a>
+    <nav><a href="#analyzer">Resume Analyzer</a><a href="#how">How it works</a><a href="#results">Your report</a></nav>
+    <a class="top-cta" href="#analyzer">Get started <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> YOUR AI CAREER COMPANION</div>
+        <h1>Turn your resume into<br><span>a career roadmap.</span></h1>
+        <p>Discover your strengths, uncover skill gaps, and find career paths that match your potential.</p>
+        <div class="hero-actions"><a class="button primary" href="#analyzer">Analyze my resume <span>→</span></a><a class="text-link" href="#how">See how it works ↓</a></div>
+        <div class="trust-row"><div class="avatars"><i>R</i><i>A</i><i>S</i></div><span>Built for students, graduates & job seekers</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="hero-card main-card">
+          <div class="mini-label">CAREER MATCH</div><div class="match-score">92<span>%</span></div>
+          <div class="match-line"><span></span></div><strong>Frontend Developer</strong><small>Strong alignment with your skills</small>
+          <div class="tag-row"><em>JavaScript</em><em>HTML/CSS</em><em>React</em></div>
+        </div>
+        <div class="float-card float-top"><span class="float-icon">↗</span><div><b>Skills identified</b><small>12 strengths found</small></div></div>
+        <div class="float-card float-bottom"><span class="float-icon violet">✧</span><div><b>Growth opportunity</b><small>3 skills to improve</small></div></div>
+        <div class="sparkle">✦</div>
+      </div>
+    </section>
+
+    <section class="workspace" id="analyzer">
+      <div class="section-heading"><div class="eyebrow">START YOUR JOURNEY</div><h2>Let's understand your potential.</h2><p>Upload your resume and tell us a little about your goals.</p></div>
+      <div class="analyzer-grid">
+        <div class="panel upload-panel">
+          <div class="panel-title"><span class="step">01</span><div><h3>Upload your resume</h3><p>PDF, DOCX or TXT · Max 5 MB</p></div></div>
+          <label class="dropzone" id="dropzone" for="resumeFile">
+            <input type="file" id="resumeFile" accept=".pdf,.docx,.txt" hidden />
+            <div class="upload-symbol">↑</div><strong>Drop your resume here</strong><span>or <u>browse files</u></span><small id="fileName">No file selected</small>
+          </label>
+          <div class="privacy-note"><span>⌑</span> Your resume is processed for this analysis and is not stored by this demo.</div>
+          <div class="divider-label"><span>OPTIONAL DETAILS</span></div>
+          <label class="field-label" for="education">Education / current status</label>
+          <select id="education"><option value="">Choose your current status</option><option>College student</option><option>Recent graduate</option><option>Working professional</option><option>Career switcher</option><option>Other</option></select>
+          <label class="field-label" for="interest">Career interests</label>
+          <input id="interest" type="text" placeholder="e.g. Web development, Data Science, UI/UX" />
+          <label class="field-label" for="experience">Experience level</label>
+          <select id="experience"><option value="">Select experience</option><option>Fresher / 0 years</option><option>Less than 1 year</option><option>1–3 years</option><option>3–5 years</option><option>5+ years</option></select>
+          <button class="button primary analyze-btn" id="analyzeBtn" disabled>Analyze my career profile <span>→</span></button>
+          <p class="form-error" id="formError" role="alert"></p>
+        </div>
+        <aside class="side-panel">
+          <div class="side-icon">✧</div><h3>What you'll get</h3>
+          <ul class="benefit-list">
+            <li><span>✓</span><div><b>Resume insights</b><small>Understand your qualifications and strengths.</small></div></li>
+            <li><span>✓</span><div><b>Skill gap analysis</b><small>See which skills could improve your profile.</small></div></li>
+            <li><span>✓</span><div><b>Career recommendations</b><small>Explore roles that fit your background.</small></div></li>
+            <li><span>✓</span><div><b>Learning roadmap</b><small>Get courses and practical next steps.</small></div></li>
+          </ul>
+          <div class="quote-box">“Your next opportunity starts with understanding what you already bring to the table.”</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="how-section" id="how"><div class="section-heading"><div class="eyebrow">SIMPLE BY DESIGN</div><h2>From resume to next step.</h2></div>
+      <div class="steps">
+        <article><span>01</span><div class="step-icon">⇧</div><h3>Upload</h3><p>Add your existing resume in a supported format.</p></article>
+        <article><span>02</span><div class="step-icon">⌕</div><h3>Analyze</h3><p>AI reviews your skills, education and experience.</p></article>
+        <article><span>03</span><div class="step-icon">✧</div><h3>Take action</h3><p>Use your personalized career and learning roadmap.</p></article>
+      </div>
+    </section>
+
+    <section class="results-section" id="results">
+      <div class="results-heading"><div><div class="eyebrow">YOUR PERSONAL REPORT</div><h2>Career insights</h2></div><button class="button secondary" id="printBtn" disabled>Print report ↗</button></div>
+      <div class="empty-state" id="emptyState"><div class="empty-art">✧</div><h3>Your report will appear here</h3><p>Upload a resume and run an analysis to see your career insights.</p></div>
+      <div class="report hidden" id="report">
+        <div class="report-top"><div><span class="mini-label">PROFILE SUMMARY</span><h3 id="profileTitle">Your profile</h3><p id="profileSummary"></p></div><div class="score-ring" id="scoreRing"><span id="scoreValue">—</span><small>PROFILE<br>STRENGTH</small></div></div>
+        <div class="report-columns">
+          <div class="report-card"><h4>✦ Skills identified</h4><div class="chips" id="skillsList"></div></div>
+          <div class="report-card"><h4>◎ Skill gaps to work on</h4><ul class="report-list" id="gapsList"></ul></div>
+        </div>
+        <div class="report-card full-card"><h4>↗ Recommended career paths</h4><div id="careersList" class="career-list"></div></div>
+        <div class="report-card full-card"><h4>▤ Learning roadmap & resources</h4><ul class="report-list roadmap" id="resourcesList"></ul></div>
+        <div class="report-card full-card"><h4>✎ Resume improvement suggestions</h4><ul class="report-list" id="suggestionsList"></ul></div>
+        <p class="disclaimer">AI-generated guidance is informational, may contain errors, and is not a guarantee of employment. Verify course details and career requirements independently.</p>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark">✦</span>CareerPilot<span class="brand-ai"> AI</span></a><span>Designed to help you move forward.</span><span>© 2026 CareerPilot AI</span></footer>
+  <div class="loading-overlay hidden" id="loading"><div class="loader"></div><h3>Reading your potential...</h3><p>Analyzing skills, experience and career matches.</p></div>
+  <script src="app.js"></script>
+</body>
+</html>
